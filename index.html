@@ -30,6 +30,17 @@
 
 </div>
 
-<script> const checkbox = document.getElementById("zustimmung"); const button = document.getElementById("download"); checkbox.addEventListener("change", function() { button.disabled = !checkbox.checked; }); button.addEventListener("click", function() { if (!checkbox.checked) return; document.getElementById("meldung").textContent = "Der Downloadlink wird im nächsten Schritt eingerichtet."; }); </script>
+<script>
+const checkbox = document.getElementById("zustimmung");
+const button = document.getElementById("download");
 
+checkbox.addEventListener("change", function() {
+    button.disabled = !checkbox.checked;
+});
+
+button.addEventListener("click", function() {
+    if (!checkbox.checked) return;
+    window.location.href = "Fangmeldung.apk";
+});
+</script>
 </body> </html>
